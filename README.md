@@ -52,6 +52,21 @@ MyClass.myStaticMember = null;
 
 ```
 ### Show an example of prototypical inheritance.
+```javascript
+function ParentClass(){
+    this.parentMember = "parent";
+}
+
+function ChildClass(){
+}
+
+//inheritance
+ChildClass.prototype = new ParentClass();
+
+var childInstance = new ChildClass();
+console.log(childInstance.parentMember); //outputs parent
+
+```
 
 ### What are some features of ES6 that you're looking forward to?
 Of course there is the typical answer of classes and modules, which are both great. But I'm also looking forward to the let operator, which allows us to use block scoping for a variable instead of function scoping.
