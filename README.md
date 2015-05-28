@@ -3,31 +3,51 @@ Questions that I've either been asked, have asked, or would ask in an interview 
 
 ## Javascript
 
-### What is the differnce between null and undefined?
+### What is the difference between null and undefined?
 Null is a specific value meant to represent "empty" whereas undefined usually signifies a variable that has not been set.
 
 ### What is the difference between == and ===?
 === compares both type and value, == will perform the same check but also attempt to perform type coercion
 
-### How does the var keyword do?
+### What does the var keyword do?
+It creates a new variable on the nearest/closest function scope. It is essentially the keyword used to create local variables in Javascript.
 
 ### In the following, what will be logged to the console?
 ```javascript
 var x = 5;
 function test(){
-  console.log(x);
+  console.log("The value of x is: ", x);
   var x = 10;
 }
 test();
 ```
 
-It will log undefined.
+It will log "The value of x is: undefined".
 
 ### What is variable hoisting?
 In Javascript, all variable and function declarations are automatically moved to the top of the function block.
 
 ### What is prototypical inheritance?
+Inheritance in Javascript is achieved using prototypical/prototypal inheritance. Instead of having classes, Javascript has constructor functions which contain instructions for instantiating a class of object. Each instance of an object contains a reference to its constructor function and to its prototype chain, which it can traverse to access parent class members and methods.
 
+### Demonstrate how to implement private, public and static members in Javascript.
+```javascript
+//constructor function
+function MyClass(){
+    //private member
+    var myPrivateMember = null;
+
+    //public member
+    this.myPublicMember = null;
+}
+
+//public method with access to instantiated object "this"
+MyClass.prototype.myPublicMethod = function(){ };
+
+//static member
+MyClass.myStaticMember = null;
+
+```
 ### Show an example of prototypical inheritance.
 
 ### What are some features of ES6 that you're looking forward to?
