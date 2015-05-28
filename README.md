@@ -1,6 +1,9 @@
 # front-end-interview-questions
 Questions that I've either been asked, have asked, or would ask in an interview for front-end developer position.
 
+- [Javascript](#javscript)
+- [Angular.js](#angularjs)
+
 ## Javascript
 
 ### What are the different types in Javascript?
@@ -32,6 +35,10 @@ In Javascript, all variable and function declarations are automatically moved to
 
 ### What is the difference between `call` and `apply`?
 Both are used to call a function and set the value of `this` within that function, but they differ in how arguments are passed to said function. `call` requires that you pass arguments as a comma separated list of values while `apply` accepts an array to be mapped to arguments.
+
+### What is an anonymous function?
+
+### What is a closure?
 
 ### What is prototypical inheritance?
 Inheritance in Javascript is achieved using prototypical/prototypal inheritance. Instead of having classes, Javascript has constructor functions which contain instructions for instantiating a class of object. Each instance of an object contains a reference to its constructor function and to its prototype chain, which it can traverse to access parent class members and methods.
