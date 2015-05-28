@@ -9,9 +9,29 @@ Null is a specific value meant to represent "empty" whereas undefined usually si
 ### What is the difference between == and ===?
 === compares both type and value, == will perform the same check but also attempt to perform type coercion
 
+### How does the var keyword do?
+
+### In the following, what will be logged to the console?
+```javascript
+var x = 5;
+function test(){
+  console.log(x);
+  var x = 10;
+}
+test();
+```
+
+It will log undefined.
+
+### What is variable hoisting?
+In Javascript, all variable and function declarations are automatically moved to the top of the function block.
+
 ### What is prototypical inheritance?
 
 ### Show an example of prototypical inheritance.
+
+### What are some features of ES6 that you're looking forward to?
+Of course there is the typical answer of classes and modules, which are both great. But I'm also looking forward to the let operator, which allows us to use block scoping for a variable instead of function scoping.
 
 ## Angular.js
 ### What are some of Angular's strengths?
@@ -22,13 +42,16 @@ Angular is a layer that runs on top of Javascript, and thus can suffer from a no
 
 Angular's module system currently does not support loading modules asynchronously (although it can be done via a workaround). Therefore you must explicitly specify the modules that will be needed up front.
 
-Sometimes the scope prototypical inheritance can through people for a loop and cause variables to be available where maybe they shouldn't be.
+Sometimes the prototypical inheritance of scope can cause variables to be available where you thought they might not be, so that's either something to be mindful of or to avoid (possibly through the use of ui-router.
 
 One also has to take extra care to tell Angular when changes have occurred outside of it, for example calling scope.$apply() inside a Javascript event handler if that handler modifies an Angular variable.
 
-A common error is not using the dot operator inside of ngModel to ensure that it does not end up masking the parent scope's variable.
+A common pitfall is not using the dot operator inside of ngModel. In cases where a new scope is created on that element, if the dot operator is not used the parent scope's value could be masked.
 
-### What are some features of ES6 that you're looking forward to?
+Angular's routing system does not support nested states, which is fine for small projects but can quickly become an issue with larger applications. Thankfully, it is easier to switch to ui-router instead.
+
+### What do you consider some indispensible third-party Angular modules?
+Two that immediately come to mind are ui-router and ui-bootstrap.
 
 ## CSS
 
