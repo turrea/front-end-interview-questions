@@ -9,8 +9,8 @@ String, Number / Floating Point, Boolean, Null, Undefined, Object
 ### What is the difference between null and undefined?
 Null is a specific value meant to represent "empty" whereas undefined usually signifies a variable that has not been set.
 
-### What is the difference between == and ===?
-=== compares both type and value, == will perform the same check but also attempt to perform type coercion
+### What is the difference between `==` and `===`?
+`===` compares both type and value, `==` will run the same check but may also attempt to perform type coercion and check again if the initial check didn't produce a satisfactory outcome.
 
 ### What does the `var` keyword do?
 It creates a new variable on the nearest/closest function scope. It is essentially the keyword used to create local variables in Javascript.
@@ -99,3 +99,5 @@ Two that immediately come to mind are ui-router and ui-bootstrap.
 ## LESS/SASS
 
 ## Grunt and Builds
+
+### What is grunt?
