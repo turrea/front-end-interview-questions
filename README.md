@@ -3,6 +3,9 @@ Questions that I've either been asked, have asked, or would ask in an interview 
 
 ## Javascript
 
+### What are the different types in Javascript?
+String, Number / Floating Point, Boolean, Null, Undefined, Object
+
 ### What is the difference between null and undefined?
 Null is a specific value meant to represent "empty" whereas undefined usually signifies a variable that has not been set.
 
@@ -70,7 +73,7 @@ A common pitfall is not using the dot operator inside of ngModel. In cases where
 
 Angular's routing system does not support nested states, which is fine for small projects but can quickly become an issue with larger applications. Thankfully, it is easier to switch to ui-router instead.
 
-### What do you consider some indispensible third-party Angular modules?
+### What do you consider some indispensable third-party Angular modules?
 Two that immediately come to mind are ui-router and ui-bootstrap.
 
 ## CSS
