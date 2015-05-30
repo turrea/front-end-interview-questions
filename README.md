@@ -5,7 +5,7 @@ Questions that I've either been asked, have asked, or would ask in an interview 
 - [Angular.js](#angularjs)
 - [CSS](#css)
 - [Grunt and Builds](#grunt-and-builds)
-- [Performance](#performance)
+- [Performance and Scalability](#performance-and-scalability)
 
 ## Javascript
 
@@ -112,16 +112,25 @@ Two that immediately come to mind are ui-router and ui-bootstrap.
 The most often used ones are ID, class, element, attribute, pseudo-class, and child selectors. Of course there are descendant and pseudo-element selectors as well.
 
 ### How is selector's specificity calculated?
-A 3-tuple is constructed using the number of ID, class, and element selectors, respectively. For example, a selector like `ul#reminders > li.item` the 3-tuple would be `(1, 1, 2)` since there is one ID selector, one class selector, and two element selectors. Then a large base such as 10 is used to calculate the specificity number `(1, 1, 2) => 1*100 + 1*10 + 2*1 = 112`. A selector such as `ul > li` would only have specificity of `(0, 0, 2) = > 0*100 + 0*10 + 2*1 = 2`. Of course this can be overridden by using `!important` next to style rules.
+A 3-tuple is constructed using the number of ID, class, and element selectors, respectively. For example, a selector like `ul#reminders > li.item` would produce the 3-tuple `(1, 1, 2)` since there is one ID selector, one class selector, and two element selectors. Then a large base such as 10 is used to calculate the specificity number `(1, 1, 2) => 1*100 + 1*10 + 2*1 = 112`. A selector such as `ul > li` would only have specificity of `(0, 0, 2) = > 0*100 + 0*10 + 2*1 = 2`. Of course this can be overridden by using `!important` next to style rules.
 
 ## LESS/SASS
 
+## Testing
+
 ## Grunt and Builds
 
-### What is grunt?
-Grunt is a task runner that provides an easy way to automate build processes.
+### What is Grunt?
+Grunt is a task runner that provides an easy way to automate build processes and other tasks you find yourself doing frequently.
 
-## Performance
+### What kind of tasks would you make sure to include in your Gruntfile?
+
+### What do you consider some necessary tasks for a release?
+
+## Performance and Scalability
 
 ### What are some things you can do to decrease page load time?
 For starters, it's always good to concatenate Javascript and CSS files (separately) so fewer requests to the server need to be made. You can reduce the payload itself through minification of both Javascript and CSS. Put as many Javascript file includes at the end of the `<body>` tag as possible, so they don't hold up the initial load of the page. At the same time, keep the essential CSS in the `<head>` element to avoid a flash of unstyled content. Wherever feasible, try to take advantage of CDNs, more specifically use CDN links that projects such as jQuery provide to their users, to increase the chances it has already been cached. Put all images used by CSS into a sprite file so only one image needs to be downloaded. Alternatively you may want to consider using inline images.
+
+### How would you make a front-end web application scalable, such that it would be easy to add new team members to help out?
+Having an organized structure to your application is key. First off, adopt a front-end framework that is conducive to structure, such as Angular.js. Secondly, don't just throw all of your controllers, services, filters, etc into one file. Instead, try to organize your application into different sections or components, so that people can be working on different sections or components concurrently without stepping on each others' toes. Probably the most convenient way to do this is to adopt a folder structure where the top level represents a section of the application and deeper levels represent sub-sections.
