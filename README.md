@@ -37,7 +37,7 @@ In Javascript, all variable and function declarations are automatically moved to
 Both are used to call a function and set the value of `this` within that function, but they differ in how arguments are passed to said function. `call` requires that you pass arguments as a comma separated list of values while `apply` accepts an array to be mapped to arguments.
 
 ### What is an anonymous function?
-As its name implies, it is an unnamed, inline function used for defining callbacks such as event handlers.
+As its name implies, it is an unnamed inline function definition, often used to succinctly set callbacks such as event handlers.
 
 ### What is a closure?
 It is the concept that a function has access to all the variables defined on the same scope the function itself was defined on.
