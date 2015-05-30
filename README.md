@@ -13,7 +13,7 @@ String, Number / Floating Point, Boolean, Null, Undefined, Object
 Null is a specific value meant to represent "empty" whereas undefined usually signifies a variable that has not been set.
 
 ### What is the difference between `==` and `===`?
-`===` compares both type and value, `==` will run the same check but may also attempt to perform type coercion and check again if the initial check didn't produce a satisfactory outcome.
+`===` compares both type and value, `==` will run the same check but may also attempt to perform type coercion and check again if the initial check didn't produce a satisfactory outcome. `===` is preferred.
 
 ### What does the `var` keyword do?
 It creates a new variable on the nearest/closest function scope. It is essentially the keyword used to create local variables in Javascript.
@@ -37,8 +37,10 @@ In Javascript, all variable and function declarations are automatically moved to
 Both are used to call a function and set the value of `this` within that function, but they differ in how arguments are passed to said function. `call` requires that you pass arguments as a comma separated list of values while `apply` accepts an array to be mapped to arguments.
 
 ### What is an anonymous function?
+As its name implies, it is an unnamed, inline function used for defining callbacks such as event handlers.
 
 ### What is a closure?
+It is the concept that a function has access to all the variables defined on the same scope the function itself was defined on.
 
 ### What is prototypical inheritance?
 Inheritance in Javascript is achieved using prototypical/prototypal inheritance. Instead of having classes, Javascript has constructor functions which contain instructions for instantiating a class of object. Each instance of an object contains a reference to its constructor function and to its prototype chain, which it can traverse to access parent class members and methods.
@@ -103,8 +105,15 @@ Two that immediately come to mind are ui-router and ui-bootstrap.
 
 ## CSS
 
+### What are the different types of CSS selectors?
+The most often used ones are ID, class, element, attribute, pseudo-class, and child selectors. Of course there are descendant and pseudo-element selectors as well.
+
+### How is selector's specificity calculated?
+A 3-tuple is constructed using the number of ID, class, and element selectors, respectively. For example, a selector like `ul#reminders > li.item` the 3-tuple would be `(1, 1, 2)` since there is one ID selector, one class selector, and two element selectors. Then a large base such as 10 is used to calculate the specificity number `(1, 1, 2) => 1*100 + 1*10 + 2*1 = 112`. A selector such as `ul > li` would only have specificity of `(0, 0, 2) = > 0*100 + 0*10 + 2*1 = 2`. Of course this can be overridden by using `!important` next to style rules.
+
 ## LESS/SASS
 
 ## Grunt and Builds
 
 ### What is grunt?
+Grunt is a task runner that provides an easy way to create tasks for automating build process.
