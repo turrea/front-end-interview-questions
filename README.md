@@ -3,6 +3,9 @@ Questions that I've either been asked, have asked, or would ask in an interview 
 
 - [Javascript](#javascript)
 - [Angular.js](#angularjs)
+- [CSS](#css)
+- [Grunt and Builds](#grunt-and-builds)
+- [Performance](#performance)
 
 ## Javascript
 
@@ -117,3 +120,8 @@ A 3-tuple is constructed using the number of ID, class, and element selectors, r
 
 ### What is grunt?
 Grunt is a task runner that provides an easy way to automate build processes.
+
+## Performance
+
+### What are some things you can do to decrease page load time?
+For starters, it's always good to concatenate Javascript and CSS files (separately) so fewer requests to the server need to be made. You can reduce the payload itself through minification of both Javascript and CSS. Put as many Javascript file includes at the end of the `<body>` tag as possible, so they don't hold up the initial load of the page. At the same time, keep the essential CSS in the `<head>` element to avoid a flash of unstyled content. Wherever feasible, try to take advantage of CDNs, more specifically use CDN links that projects such as jQuery provide to their users, to increase the chances it has already been cached. Put all images used by CSS into a sprite file so only one image needs to be downloaded. Alternatively you may want to consider using inline images.
