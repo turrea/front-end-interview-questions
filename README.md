@@ -48,7 +48,7 @@ Inheritance in Javascript is achieved using prototypical/prototypal inheritance.
 ### Demonstrate how to implement private, public and static members in Javascript.
 ```javascript
 //constructor function
-function MyClass(){
+function MyClass() {
     //private member
     var myPrivateMember = null;
 
@@ -65,18 +65,18 @@ MyClass.myStaticMember = null;
 ```
 ### Show an example of prototypical inheritance.
 ```javascript
-function ParentClass(){
+function ParentClass() {
     this.parentMember = "parent";
 }
 
-function ChildClass(){
+function ChildClass() {
 }
 
 //inheritance
 ChildClass.prototype = new ParentClass();
 
 var childInstance = new ChildClass();
-console.log(childInstance.parentMember); //outputs parent
+console.log(childInstance.parentMember); //logs "parent"
 
 ```
 
@@ -116,4 +116,4 @@ A 3-tuple is constructed using the number of ID, class, and element selectors, r
 ## Grunt and Builds
 
 ### What is grunt?
-Grunt is a task runner that provides an easy way to create tasks for automating build process.
+Grunt is a task runner that provides an easy way to automate build processes.
