@@ -112,7 +112,7 @@ Two that immediately come to mind are ui-router and ui-bootstrap.
 The most often used ones are ID, class, element, attribute, pseudo-class, and child selectors. Of course there are descendant and pseudo-element selectors as well.
 
 ### How is selector's specificity calculated?
-A 3-tuple is constructed using the number of ID, class, and element selectors, respectively. For example, a selector like `ul#reminders > li.item` would produce the 3-tuple `(1, 1, 2)` since there is one ID selector, one class selector, and two element selectors. Then a large base such as 10 is used to calculate the specificity number `(1, 1, 2) => 1*100 + 1*10 + 2*1 = 112`. A selector such as `ul > li` would only have specificity of `(0, 0, 2) = > 0*100 + 0*10 + 2*1 = 2`. Of course this can be overridden by using `!important` next to style rules.
+A 3-tuple is constructed using the number of IDs, element attributes and pseudo-classes, and element names, respectively. For example, a selector like `ul#reminders > li.item` would produce the 3-tuple `(1, 1, 2)` since there is one ID, one class, and two element names. Then a large base such as 10 is used to calculate the specificity number `(1, 1, 2) => 1*100 + 1*10 + 2*1 = 112`. A selector such as `ul > li` would only have specificity of `(0, 0, 2) = > 0*100 + 0*10 + 2*1 = 2`. Of course this can be overridden by using `!important` next to style rules.
 
 ## LESS/SASS
 
